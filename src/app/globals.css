@@ -43,3 +43,21 @@
 .animate-marquee-reverse {
   animation: marquee-reverse 30s linear infinite;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* Subtle light blue gradient like JetAge */
+    background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 50%, #F0F9FF 100%);
+    background-attachment: fixed;
+    color: #111827;
+  }
+  
+  ::selection {
+    background-color: #F97316;
+    color: white;
+  }
+}
