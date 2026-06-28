@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Cpu, Cable, Network, Plug, Radio, Router, Zap, Shield, Truck, Headphones } from "lucide-react";
 import Link from "next/link";
-import Hero3DNetwork from "@/components/Hero3DNetwork";
-import FadeIn from "@/components/FadeIn";
-import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
-import CountUp from "@/components/CountUp";
-import Marquee from "@/components/Marquee";
-import ProductCard from "@/components/ProductCard";
-import Button from "@/components/Button";
-import { products, categories, getFeaturedProducts } from "@/lib/product";
+import Hero3DNetwork from "@/components/3d/Hero3DNetwork";
+import FadeIn from "@/components/animations/FadeIn";
+import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
+import CountUp from "@/components/animations/CountUp";
+import Marquee from "@/components/animations/Marquee";
+import ProductCard from "@/components/ui/ProductCard";
+import Button from "@/components/ui/Button";
+import { products, categories, getFeaturedProducts } from "@/data/product";
 import { generateBulkOrderLink } from "@/lib/utils";
 
 const stats = [

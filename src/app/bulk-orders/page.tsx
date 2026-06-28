@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Percent, Truck, Clock, Shield, Package, Check } from "lucide-react";
-import FadeIn from "@/components/FadeIn";
-import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+import FadeIn from "@/components/animations/FadeIn";
+import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 
 const benefits = [
   { icon: Percent, title: "15-25% Distributor Margin", desc: "Competitive margins for bulk distributors" },

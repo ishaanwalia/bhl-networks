@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Users, Award, TrendingUp } from "lucide-react";
-import FadeIn from "@/components/FadeIn";
-import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
-import CountUp from "@/components/CountUp";
+import FadeIn from "@/components/animations/FadeIn";
+import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
+import CountUp from "@/components/animations/CountUp";
 
 const values = [
   { icon: Target, title: "Quality First", desc: "Every product is tested and certified before it reaches our dealers." },

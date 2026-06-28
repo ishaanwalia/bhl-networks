@@ -27,7 +27,7 @@ function NetworkNode({ position, color }: { position: [number, number, number]; 
 }
 
 function Connection({ start, end }: { start: [number, number, number]; end: [number, number, number] }) {
-  const lineRef = useRef<THREE.Line>(null);
+  const lineRef = useRef<any>(null);  
   const points = useMemo(() => [new THREE.Vector3(...start), new THREE.Vector3(...end)], [start, end]);
 
   useFrame((state) => {
@@ -40,7 +40,7 @@ function Connection({ start, end }: { start: [number, number, number]; end: [num
   return (
     <line ref={lineRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={2} array={new Float32Array([points[0].x, points[0].y, points[0].z, points[1].x, points[1].y, points[1].z])} itemSize={3} />
+        <bufferAttribute attach="attributes-position" args={[new Float32Array([points[0].x, points[0].y, points[0].z, points[1].x, points[1].y, points[1].z]), 3]} />
       </bufferGeometry>
       <lineBasicMaterial color="#F97316" transparent opacity={0.2} />
     </line>

@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, MapPin, Phone, Clock, Send, Check } from "lucide-react";
-import FadeIn from "@/components/FadeIn";
-import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+import { MessageCircle, Mail, MapPin, Phone, Clock, Send, Check, Truck, ArrowRight } from "lucide-react";
+import FadeIn from "@/components/animations/FadeIn";
+import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerContainer";
 
 const contactCards = [
   {
