@@ -30,19 +30,27 @@ export function ParticleBackground() {
     resize();
     window.addEventListener("resize", resize);
 
-    // 500+ tiny particles across full page
+    // 600 particles
     const particleCount = Math.min(600, Math.floor((window.innerWidth * window.innerHeight) / 3500));
     
-    // Very light orange/cream — barely visible on white
-    const colors = ["#FED7AA", "#FFEDD5", "#FDBA74", "#FFF7ED", "#FDE68A"];
+    // Mix of colors: some visible on white, some visible on dark
+    const colors = [
+      "#F97316", // BHL orange — visible on white
+      "#EA580C", // Darker orange — visible on white  
+      "#FB923C", // Medium orange — visible on white
+      "#FDBA74", // Light orange — subtle on white
+      "#FED7AA", // Very light — visible on dark
+      "#FFEDD5", // Cream — visible on dark
+      "#FDE68A", // Yellow tint — visible on both
+    ];
 
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.15, // Very slow drift
+      vx: (Math.random() - 0.5) * 0.15,
       vy: (Math.random() - 0.5) * 0.15,
-      radius: Math.random() * 1.2 + 0.3, // Tiny: 0.3 to 1.5px
-      opacity: Math.random() * 0.15 + 0.03, // Very faint: 0.03 to 0.18
+      radius: Math.random() * 1.5 + 0.5, // 0.5 to 2px
+      opacity: Math.random() * 0.4 + 0.15, // 0.15 to 0.55 — MORE VISIBLE
       color: colors[Math.floor(Math.random() * colors.length)],
     }));
 
@@ -54,13 +62,11 @@ export function ParticleBackground() {
         p.x += p.vx;
         p.y += p.vy;
 
-        // Wrap around
         if (p.x < -5) p.x = canvas.width + 5;
         if (p.x > canvas.width + 5) p.x = -5;
         if (p.y < -5) p.y = canvas.height + 5;
         if (p.y > canvas.height + 5) p.y = -5;
 
-        // Draw tiny dot — no glow, no connections
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
