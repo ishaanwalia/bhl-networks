@@ -12,6 +12,7 @@ import ProductCard from "@/components/ProductCard";
 import Button from "@/components/Button";
 import { products, categories, getFeaturedProducts } from "@/lib/product";
 import { generateBulkOrderLink } from "@/lib/utils";
+import { ParticleBackground } from "../components/ParticleBackground";
 
 const stats = [
   { value: 400, suffix: "+", label: "Products" },
@@ -50,7 +51,7 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-        <Hero3DNetwork />
+        <ParticleBackground />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

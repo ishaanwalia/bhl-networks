@@ -9,6 +9,7 @@ interface Particle {
   vy: number;
   radius: number;
   opacity: number;
+  color: string;
 }
 
 export function ParticleBackground() {
@@ -23,46 +24,46 @@ export function ParticleBackground() {
     if (!ctx) return;
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const parent = canvas.parentElement;
+      if (!parent) return;
+      canvas.width = parent.offsetWidth;
+      canvas.height = parent.offsetHeight;
     };
     resize();
     window.addEventListener("resize", resize);
 
-    // Very sparse particles — JetAge style
-    const particleCount = Math.min(80, Math.floor((window.innerWidth * window.innerHeight) / 25000));
+    // Very sparse — only in hero area
+    const particleCount = Math.min(40, Math.floor((canvas.width * canvas.height) / 50000));
     
-    // Light blue/cyan colors — subtle, not orange
-    const colors = ["#E0F2FE", "#BAE6FD", "#7DD3FC", "#38BDF8"];
+    // Light orange/cream — subtle on white
+    const colors = ["#FED7AA", "#FDBA74", "#FB923C"];
 
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.3, // Very slow movement
-      vy: (Math.random() - 0.5) * 0.3,
-      radius: Math.random() * 1.5 + 0.5, // Tiny dots
-      opacity: Math.random() * 0.3 + 0.1, // Very low opacity
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      radius: Math.random() * 2 + 0.5,
+      opacity: Math.random() * 0.25 + 0.05,
+      color: colors[Math.floor(Math.random() * colors.length)],
     }));
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       const particles = particlesRef.current;
 
       particles.forEach((p) => {
         p.x += p.vx;
         p.y += p.vy;
 
-        // Wrap around edges
         if (p.x < -10) p.x = canvas.width + 10;
         if (p.x > canvas.width + 10) p.x = -10;
         if (p.y < -10) p.y = canvas.height + 10;
         if (p.y > canvas.height + 10) p.y = -10;
 
-        // Draw tiny dot — no glow, no connections
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+        ctx.fillStyle = p.color;
         ctx.globalAlpha = p.opacity;
         ctx.fill();
       });
@@ -82,8 +83,8 @@ export function ParticleBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.4 }} // Much lower overall opacity
+      className="absolute inset-0 pointer-events-none"
+      style={{ opacity: 0.6 }}
     />
   );
 }
