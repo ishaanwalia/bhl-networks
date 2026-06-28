@@ -26,25 +26,28 @@ export function ParticleBackground() {
     const resize = () => {
       const parent = canvas.parentElement;
       if (!parent) return;
+      // Set canvas size to match parent
       canvas.width = parent.offsetWidth;
       canvas.height = parent.offsetHeight;
     };
+    
+    // Initial resize
     resize();
     window.addEventListener("resize", resize);
 
-    // Very sparse — only in hero area
-    const particleCount = Math.min(40, Math.floor((canvas.width * canvas.height) / 50000));
+    // Particle count based on hero size
+    const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 50000));
     
-    // Light orange/cream — subtle on white
-    const colors = ["#FED7AA", "#FDBA74", "#FB923C"];
+    // Light orange/cream colors — subtle on white
+    const colors = ["#FED7AA", "#FDBA74", "#FB923C", "#FFF7ED"];
 
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.2,
-      vy: (Math.random() - 0.5) * 0.2,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
       radius: Math.random() * 2 + 0.5,
-      opacity: Math.random() * 0.25 + 0.05,
+      opacity: Math.random() * 0.3 + 0.1,
       color: colors[Math.floor(Math.random() * colors.length)],
     }));
 
@@ -83,8 +86,8 @@ export function ParticleBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      style={{ opacity: 0.6 }}
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{ opacity: 0.7 }}
     />
   );
 }
