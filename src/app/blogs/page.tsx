@@ -4,8 +4,8 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Clock, Tag, ArrowRight, X } from "lucide-react";
 import Link from "next/link";
-import { blogs, getBlogCategories } from "@/data/blogs";
-import FadeIn from "@/components/animations/FadeIn";
+import { blogs, getBlogCategories } from "@/src/lib/blogs";
+import FadeIn from "@/src/components/FadeIn";
 
 export default function BlogsPage() {
   const [searchQuery, setSearchQuery] = useState("");

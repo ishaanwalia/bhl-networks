@@ -1,4 +1,4 @@
-import { blogs } from "@/data/blogs";
+import { blogs } from "@/src/lib/blogs";
 import BlogDetailClient from "./BlogDetailClient";
 
 export async function generateStaticParams() {

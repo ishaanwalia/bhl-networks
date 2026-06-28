@@ -1,4 +1,4 @@
-import { products } from "@/data/product";
+import { products } from "@/src/lib/product";
 import ProductDetailClient from "./ProductDetailClient";
 
 export async function generateStaticParams() {
