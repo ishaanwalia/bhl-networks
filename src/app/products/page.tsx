@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, Suspense } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SlidersHorizontal, Grid3X3, List, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
@@ -14,6 +14,14 @@ export default function ProductsPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [sortBy, setSortBy] = useState("featured");
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+
+  // Read category from URL hash on mount
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash && categories.some((c) => c.id === hash)) {
+      setSelectedCategory(hash);
+    }
+  }, []);
 
   const filteredProducts = useMemo(() => {
     let result = [...products];

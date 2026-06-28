@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
+import { ParticleBackground } from "@/components/ParticleBackground";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased bg-white text-bhl-gray-900">
+        <ParticleBackground />
         <Navbar />
         <main>{children}</main>
         <Footer />

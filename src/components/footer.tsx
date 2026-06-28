@@ -2,11 +2,11 @@ import Link from "next/link";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 const productLinks = [
-  { href: "/products", label: "SFP Modules" },
-  { href: "/products", label: "Fiber Products" },
-  { href: "/products", label: "Switches" },
-  { href: "/products", label: "Cabling" },
-  { href: "/products", label: "GPON Products" },
+  { href: "/products#sfp-modules", label: "SFP Modules" },
+  { href: "/products#fiber-products", label: "Fiber Products" },
+  { href: "/products#switches", label: "Switches" },
+  { href: "/products#cabling", label: "Cabling" },
+  { href: "/products#gpon-products", label: "GPON Products" },
 ];
 
 const supportLinks = [
