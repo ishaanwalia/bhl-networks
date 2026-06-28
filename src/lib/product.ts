@@ -1,347 +1,116 @@
-export interface Product {
-  id: string;
-  slug: string;
-  name: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  badge?: string;
-  description: string;
-  shortSpecs: string[];
-  features: string[];
-  specifications: Record<string, string>;
-  useCases: string[];
-  types: { title: string; items: string[] }[];
-  proTips: string[];
-  compatibleWith: string[];
-  inBox: string[];
-  warranty: string;
-  images: number;
-}
+import { Product, categories } from './types';
 
-export const categories = [
-  { id: "sfp-modules", name: "SFP Modules", icon: "Cpu", count: 26 },
-  { id: "fiber-products", name: "Fiber Products", icon: "Cable", count: 22 },
-  { id: "switches", name: "Switches", icon: "Network", count: 18 },
-  { id: "cabling", name: "Cabling", icon: "Plug", count: 35 },
-  { id: "ftth-accessories", name: "FTTH Accessories", icon: "Radio", count: 15 },
-  { id: "gpon-products", name: "GPON Products", icon: "Router", count: 11 },
+// Import all category product arrays
+import { sfp_modules_products } from './products/sfp-modules';
+import { fiber_products } from './products/fiber-products';
+import { switches_products } from './products/switches';
+import { cabling_products } from './products/cabling';
+import { ftth_accessories_products } from './products/ftth-accessories';
+import { gpon_products } from './products/gpon-products';
+import { network_kits_products } from './products/network-kits';
+
+// Export types
+export type { Product } from './types';
+export { categories } from './types';
+
+// Export individual category arrays
+export { sfp_modules_products } from './products/sfp-modules';
+export { fiber_products } from './products/fiber-products';
+export { switches_products } from './products/switches';
+export { cabling_products } from './products/cabling';
+export { ftth_accessories_products } from './products/ftth-accessories';
+export { gpon_products } from './products/gpon-products';
+export { network_kits_products } from './products/network-kits';
+
+// Combined array of all products
+export const allProducts: Product[] = [
+  ...sfp_modules_products,
+  ...fiber_products,
+  ...switches_products,
+  ...cabling_products,
+  ...ftth_accessories_products,
+  ...gpon_products,
+  ...network_kits_products,
 ];
 
-export const products: Product[] = [
-  {
-    id: "sfp-1g-lc-sx",
-    slug: "bhl-sfp-1g-lc-sx",
-    name: "BHL SFP 1G LC SX",
-    category: "sfp-modules",
-    subcategory: "1g-sfp",
-    price: 1499,
-    badge: "Best Seller",
-    description: "High-performance 1.25Gbps multimode SFP transceiver with LC duplex connector. Supports up to 550m over OM2 fiber. MSA compliant and hot-pluggable.",
-    shortSpecs: ["1.25Gbps", "LC Duplex", "550m", "850nm"],
-    features: ["MSA Compliant", "Hot-pluggable", "DDM Support", "Low Power", "1-Year Warranty"],
-    specifications: { "Form Factor": "SFP", "Data Rate": "1.25 Gbps", "Connector": "LC Duplex", "Fiber Type": "Multimode", "Wavelength": "850nm", "Max Distance": "550m", "Certification": "CE, RoHS" },
-    useCases: ["ISP backbone", "Enterprise uplinks", "FTTH distribution", "CCTV backbone", "Data center links"],
-    types: [{ title: "By Standard", items: ["1000BASE-SX", "1000BASE-LX", "1000BASE-ZX", "1000BASE-BiDi"] }, { title: "By Fiber", items: ["Single Mode", "Multimode"] }],
-    proTips: ["Always match SFP wavelength pairs", "Verify switch compatibility", "Keep spare SFPs in stock"],
-    compatibleWith: ["Aruba", "Cisco", "TP-Link", "Ubiquiti", "D-Link"],
-    inBox: ["1 × BHL SFP 1G LC SX", "1 × Static bag", "1 × Warranty card"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "sfp-1g-lc-lx",
-    slug: "bhl-sfp-1g-lc-lx",
-    name: "BHL SFP 1G LC LX",
-    category: "sfp-modules",
-    subcategory: "1g-sfp",
-    price: 2199,
-    description: "Single-mode 1.25Gbps SFP transceiver. Supports up to 10km over OS2 fiber. Ideal for enterprise and ISP applications.",
-    shortSpecs: ["1.25Gbps", "LC Duplex", "10km", "1310nm"],
-    features: ["MSA Compliant", "Hot-pluggable", "DDM Support", "10km Reach", "Low Power"],
-    specifications: { "Form Factor": "SFP", "Data Rate": "1.25 Gbps", "Connector": "LC Duplex", "Fiber Type": "Single Mode", "Wavelength": "1310nm", "Max Distance": "10km", "Certification": "CE, RoHS" },
-    useCases: ["Building-to-building links", "ISP connections", "Campus networks", "CCTV long runs", "Telecom access"],
-    types: [{ title: "By Distance", items: ["LX — 10km", "EX — 40km", "ZX — 80km"] }],
-    proTips: ["Use OS2 fiber for >10km", "Clean fiber before insertion", "Test link budget"],
-    compatibleWith: ["Aruba", "Cisco", "TP-Link", "Ubiquiti"],
-    inBox: ["1 × BHL SFP 1G LC LX", "1 × Static bag", "1 × Warranty card"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "sfp-10g-sr",
-    slug: "bhl-sfp-10g-sr",
-    name: "BHL SFP+ 10G SR",
-    category: "sfp-modules",
-    subcategory: "10g-sfp",
-    price: 3499,
-    badge: "Best Seller",
-    description: "High-speed 10Gbps multimode SFP+ transceiver. Supports 300m over OM3 fiber. Perfect for data centers.",
-    shortSpecs: ["10Gbps", "LC Duplex", "300m", "850nm"],
-    features: ["10Gbps Speed", "300m over OM3", "Low Latency", "Hot-pluggable", "Energy Efficient"],
-    specifications: { "Form Factor": "SFP+", "Data Rate": "10.3125 Gbps", "Connector": "LC Duplex", "Fiber Type": "Multimode", "Wavelength": "850nm", "Max Distance": "300m", "Certification": "CE, RoHS" },
-    useCases: ["Data center servers", "Core switch uplinks", "High-speed CCTV", "Virtualization clusters", "SAN links"],
-    types: [{ title: "By Distance", items: ["SR — 300m", "LR — 10km", "ER — 40km", "ZR — 80km"] }],
-    proTips: ["Use OM3 or OM4 for 10G", "SFP+ needs SFP+ ports", "Check switch compatibility"],
-    compatibleWith: ["Aruba", "Cisco", "TP-Link", "Ubiquiti", "D-Link"],
-    inBox: ["1 × BHL SFP+ 10G SR", "1 × Static bag", "1 × Warranty card"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "copper-sfp-1g",
-    slug: "bhl-copper-sfp-10-100-1000",
-    name: "BHL Copper SFP 10/100/1000",
-    category: "sfp-modules",
-    subcategory: "copper-sfp",
-    price: 2499,
-    description: "RJ45 copper SFP supporting 10/100/1000Mbps. Connects SFP ports to standard Ethernet up to 100m.",
-    shortSpecs: ["10/100/1000M", "RJ45", "100m", "Copper"],
-    features: ["Triple Speed", "RJ45 Connector", "100m Reach", "Hot-pluggable", "Cost Effective"],
-    specifications: { "Form Factor": "SFP", "Data Rate": "10/100/1000 Mbps", "Connector": "RJ45", "Cable Type": "Cat5e/Cat6", "Max Distance": "100m", "Certification": "CE, RoHS" },
-    useCases: ["Hybrid networks", "Legacy integration", "Short server connections", "Temporary setups", "Non-fiber equipment"],
-    types: [{ title: "By Speed", items: ["10/100/1000M", "10G-T"] }, { title: "By Reach", items: ["100m", "30m", "80m"] }],
-    proTips: ["Copper SFPs run hot", "Use Cat6a for 10G", "Ensure ventilation"],
-    compatibleWith: ["Aruba", "Cisco", "TP-Link", "Ubiquiti"],
-    inBox: ["1 × BHL Copper SFP", "1 × Static bag", "1 × Warranty card"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "fiber-sm-lc-lc-3m",
-    slug: "bhl-sm-patch-cord-lc-lc-3m",
-    name: "BHL SM Patch Cord LC-LC 3m",
-    category: "fiber-products",
-    subcategory: "patch-cord",
-    price: 249,
-    badge: "Best Seller",
-    description: "Premium single-mode fiber patch cord. 3m length, OS2 grade, UPC polish. Factory tested.",
-    shortSpecs: ["OS2 SM", "LC-LC", "3m", "UPC"],
-    features: ["Low Loss <0.3dB", "High Return Loss >50dB", "Factory Tested", "OS2 Grade", "Pull-Proof"],
-    specifications: { "Fiber Type": "Single Mode", "Connector": "LC-LC", "Length": "3m", "Polish": "UPC", "Insertion Loss": "≤0.3dB", "Return Loss": "≥50dB", "Certification": "CE, RoHS" },
-    useCases: ["OLT to ONU", "Switch links", "Patch panel connections", "Data centers", "CCTV fiber"],
-    types: [{ title: "By Mode", items: ["OS2", "OM3", "OM4", "OM5"] }, { title: "By Connector", items: ["LC-LC", "SC-SC", "LC-SC"] }, { title: "By Polish", items: ["UPC", "APC"] }],
-    proTips: ["Use APC for GPON", "Match fiber types", "Label both ends"],
-    compatibleWith: ["All SFP modules", "OLT/ONU", "Fiber switches"],
-    inBox: ["1 × Patch Cord", "2 × Dust caps"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "cat6-patch-1m-blue",
-    slug: "bhl-cat6-patch-cord-1m-blue",
-    name: "BHL Cat6 Patch Cord 1m (Blue)",
-    category: "cabling",
-    subcategory: "patch-cord",
-    price: 69,
-    badge: "Best Seller",
-    description: "Premium Cat6 patch cord. 1Gbps, 250MHz, 100% pure copper. Gold-plated contacts, snagless boot.",
-    shortSpecs: ["Cat6", "1m", "1Gbps", "Blue"],
-    features: ["1Gbps Speed", "250MHz", "100% Copper", "Gold Plated", "Snagless Boot", "Fluke Tested"],
-    specifications: { "Category": "Cat6", "Length": "1m", "Color": "Blue", "Speed": "1 Gbps", "Bandwidth": "250 MHz", "Conductor": "24 AWG Pure Copper", "Certification": "CE, RoHS" },
-    useCases: ["Aruba APs", "Patch panels", "CCTV NVR", "Office networks", "Server racks"],
-    types: [{ title: "By Category", items: ["Cat5e", "Cat6", "Cat6A", "Cat7"] }, { title: "By Length", items: ["0.5m", "1m", "2m", "3m", "5m", "10m"] }, { title: "By Color", items: ["Blue", "Grey", "Red", "Green", "Yellow", "Black"] }],
-    proTips: ["Use pure copper only", "Buy 10-20% extra", "Color-code your network"],
-    compatibleWith: ["All RJ45 devices", "Switches", "Routers", "APs", "CCTV"],
-    inBox: ["1 × Cat6 Patch Cord"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "poe-switch-8-port",
-    slug: "bhl-poe-8-port",
-    name: "BHL PoE 8-Port Switch",
-    category: "switches",
-    subcategory: "poe-switch",
-    price: 5999,
-    badge: "Popular",
-    description: "8-port Gigabit PoE+ switch with 150W budget. 2 SFP uplinks, AI detection, VLAN support.",
-    shortSpecs: ["8 PoE+", "150W", "2 SFP", "Gigabit"],
-    features: ["8 PoE+ Ports", "150W Budget", "2 SFP Uplinks", "AI Detection", "VLAN Support", "Surge Protection"],
-    specifications: { "Ports": "8 × Gigabit", "PoE Ports": "8 (802.3at)", "PoE Budget": "150W", "Uplink": "2 × SFP", "Switching Capacity": "20 Gbps", "Certification": "CE, RoHS" },
-    useCases: ["CCTV cameras", "WiFi APs", "VoIP phones", "Office networks", "Smart buildings"],
-    types: [{ title: "By PoE", items: ["802.3af 15.4W", "802.3at 30W", "802.3bt 90W"] }, { title: "By Ports", items: ["4-Port", "8-Port", "16-Port", "24-Port"] }],
-    proTips: ["Calculate power budget", "Enable LLDP", "Use PoE+ for PTZ"],
-    compatibleWith: ["Aruba", "Ubiquiti", "TP-Link", "Hikvision", "Dahua"],
-    inBox: ["1 × Switch", "1 × Power cord", "2 × Brackets", "1 × Guide"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "dac-sfp-10g-1m",
-    slug: "bhl-dac-sfp-10g-1m",
-    name: "BHL DAC SFP+ 10G 1m",
-    category: "cabling",
-    subcategory: "dac",
-    price: 1550,
-    description: "Passive DAC cable with SFP+ connectors. 10Gbps, 1m length. Low power, plug-and-play.",
-    shortSpecs: ["10G", "SFP+", "1m", "Passive"],
-    features: ["10Gbps Speed", "Passive Design", "1-Meter", "Plug & Play", "Low Latency", "Cost Effective"],
-    specifications: { "Type": "DAC", "Speed": "10 Gbps", "Connector": "SFP+", "Length": "1m", "Cable Type": "Passive Copper", "Power": "0W", "Certification": "CE, RoHS" },
-    useCases: ["Switch-to-switch", "Server-to-switch", "CCTV NVR uplinks", "Storage arrays", "Intra-rack links"],
-    types: [{ title: "By Type", items: ["Passive", "Active"] }, { title: "By Speed", items: ["10G", "25G", "40G", "100G"] }],
-    proTips: ["Use for same-rack", "Active for 5-7m", "Plan cable management"],
-    compatibleWith: ["Cisco", "Aruba", "Dell", "Juniper", "MikroTik"],
-    inBox: ["1 × DAC Cable"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "poe-injector-8023at",
-    slug: "bhl-poe-injector-8023at",
-    name: "BHL PoE Injector 802.3at",
-    category: "ftth-accessories",
-    subcategory: "poe-injector",
-    price: 1299,
-    description: "30W PoE+ injector following IEEE 802.3at. Auto-negotiates power. Safe for all equipment.",
-    shortSpecs: ["30W", "PoE+", "802.3at", "48V"],
-    features: ["30W Output", "Auto-Negotiation", "802.3at Standard", "Surge Protection", "LED Indicators", "Compact Design"],
-    specifications: { "Standard": "IEEE 802.3at", "Output Power": "30W", "Output Voltage": "48V", "Input": "AC 100-240V", "Data Rate": "Gigabit", "Certification": "CE, RoHS" },
-    useCases: ["PTZ cameras", "High-power APs", "LED panels", "Conference phones", "Remote devices"],
-    types: [{ title: "By Standard", items: ["802.3af 15.4W", "802.3at 30W", "802.3bt 90W", "Passive"] }, { title: "By Port", items: ["Single", "Multi-Port", "Midspan"] }],
-    proTips: ["Use Active PoE", "Check device requirements", "Cost-effective for 1-2 devices"],
-    compatibleWith: ["All 802.3at devices", "Aruba", "Ubiquiti", "Hikvision"],
-    inBox: ["1 × Injector", "1 × Power cord", "1 × Manual"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "keystone-cat6",
-    slug: "bhl-cat6-keystone-jack",
-    name: "BHL Cat6 Keystone Jack",
-    category: "cabling",
-    subcategory: "keystone",
-    price: 89,
-    description: "Cat6 keystone jack for structured cabling. 250MHz, 1Gbps. Punch-down termination.",
-    shortSpecs: ["Cat6", "250MHz", "1Gbps", "Punch-down"],
-    features: ["Cat6 Performance", "Punch-down Type", "Color Coded", "Gold Contacts", "Snap-in Fit", "Dust Cover"],
-    specifications: { "Category": "Cat6", "Speed": "1 Gbps", "Bandwidth": "250 MHz", "Termination": "Punch-down", "Connector": "RJ45", "Certification": "CE, RoHS" },
-    useCases: ["Wall plates", "Patch panels", "Structured cabling", "Office networks", "Hotels"],
-    types: [{ title: "By Category", items: ["Cat5e", "Cat6", "Cat6A", "Cat7"] }, { title: "By Type", items: ["Punch-down", "Tool-less", "Shielded", "Fiber"] }],
-    proTips: ["Use quality punch tool", "Keep twists close", "Test every jack"],
-    compatibleWith: ["All keystone plates", "Patch panels", "Wall plates"],
-    inBox: ["1 × Keystone Jack", "1 × Dust cover", "1 × Label"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "gpon-olt-4-port",
-    slug: "bhl-gpon-4-port-olt",
-    name: "BHL GPON 4-Port OLT",
-    category: "gpon-products",
-    subcategory: "olt",
-    price: 62888,
-    badge: "New",
-    description: "4-port GPON OLT with L3 management. 256 ONU users, 1:64 split ratio. 4 GE + 4 SFP uplinks.",
-    shortSpecs: ["4 PON", "256 ONU", "1:64 Split", "L3 Managed"],
-    features: ["4 PON Ports", "256 Users", "1:64 Split", "20km Reach", "L3 Management", "Redundant Power"],
-    specifications: { "PON Ports": "4 × GPON", "Uplink": "4 GE + 4 SFP", "Split Ratio": "1:64", "Max Users": "256", "Max Distance": "20km", "Certification": "CE, RoHS" },
-    useCases: ["ISP FTTH", "Apartments", "Campus networks", "Rural broadband", "Commercial buildings"],
-    types: [{ title: "By PON", items: ["GPON", "XGS-PON", "EPON", "NG-PON2"] }, { title: "By Ports", items: ["1-Port", "4-Port", "8-Port", "16-Port"] }],
-    proTips: ["Plan split ratio", "Use APC connectors", "Monitor optical levels"],
-    compatibleWith: ["All GPON ONU", "BHL ONU series", "Standard splitters"],
-    inBox: ["1 × OLT", "1 × Power cord", "2 × Brackets", "1 × Console cable", "1 × Guide"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "cat6-patch-2m-blue",
-    slug: "bhl-cat6-patch-cord-2m-blue",
-    name: "BHL Cat6 Patch Cord 2m (Blue)",
-    category: "cabling",
-    subcategory: "patch-cord",
-    price: 89,
-    description: "2-meter Cat6 patch cord with 1Gbps support. Pure copper construction with molded strain relief.",
-    shortSpecs: ["Cat6", "2m", "1Gbps", "Blue"],
-    features: ["1Gbps", "250MHz", "Pure Copper", "Molded Relief", "Gold Plated"],
-    specifications: { "Category": "Cat6", "Length": "2m", "Color": "Blue", "Speed": "1 Gbps", "Bandwidth": "250 MHz", "Certification": "CE, RoHS" },
-    useCases: ["Switch to AP", "Patch panel", "CCTV cameras", "Office drops", "Servers"],
-    types: [{ title: "By Length", items: ["0.5m", "1m", "2m", "3m", "5m", "10m"] }, { title: "By Color", items: ["Blue", "Grey", "Black", "Red", "Green", "Yellow"] }],
-    proTips: ["2m is most versatile", "Use velcro ties", "Don't use zip ties"],
-    compatibleWith: ["All RJ45 devices"],
-    inBox: ["1 × Cat6 Patch Cord"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "poe-switch-24-port",
-    slug: "bhl-poe-24-port",
-    name: "BHL PoE 24-Port Switch",
-    category: "switches",
-    subcategory: "poe-switch",
-    price: 16999,
-    description: "24-port Gigabit PoE+ managed switch. 400W budget, 4 SFP uplinks, full L2 management.",
-    shortSpecs: ["24 PoE+", "400W", "4 SFP", "L2 Managed"],
-    features: ["24 PoE+ Ports", "400W Budget", "4 SFP Uplinks", "Full L2", "SNMP Support", "Rackmount"],
-    specifications: { "Ports": "24 × Gigabit", "PoE Ports": "24", "PoE Budget": "400W", "Uplink": "4 × SFP", "Switching Capacity": "52 Gbps", "Certification": "CE, RoHS" },
-    useCases: ["Enterprise offices", "Large CCTV", "Hotel WiFi", "Hospital networks", "Schools"],
-    types: [{ title: "By Management", items: ["Unmanaged", "Web Managed", "Full L2", "L3"] }, { title: "By Power", items: ["250W", "400W", "500W", "740W"] }],
-    proTips: ["Plan for 400W minimum", "Use LACP for uplinks", "Enable IGMP snooping"],
-    compatibleWith: ["All PoE devices", "IP cameras", "APs", "VoIP phones"],
-    inBox: ["1 × Switch", "1 × Power cord", "2 × Brackets", "1 × Console cable", "1 × Guide"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "sfp-1g-bidi-20km",
-    slug: "bhl-sfp-1g-bidi-20km",
-    name: "BHL SFP 1G BiDi 20km",
-    category: "sfp-modules",
-    subcategory: "1g-sfp",
-    price: 1899,
-    badge: "Popular",
-    description: "Single-fiber BiDi SFP using WDM technology. TX1310/RX1550nm. 20km over single-mode fiber.",
-    shortSpecs: ["1.25Gbps", "Single Fiber", "20km", "BiDi"],
-    features: ["Single Fiber", "WDM Technology", "20km Reach", "Cost Effective", "MSA Compliant"],
-    specifications: { "Form Factor": "SFP", "Data Rate": "1.25 Gbps", "Connector": "LC Simplex", "Wavelength": "TX1310/RX1550nm", "Max Distance": "20km", "Certification": "CE, RoHS" },
-    useCases: ["ISP FTTH", "Enterprise WAN", "Fiber lease lines", "CCTV limited fiber", "Rural broadband"],
-    types: [{ title: "By Distance", items: ["20km", "40km", "60km", "80km"] }, { title: "By Pair", items: ["Type A TX1310/RX1550", "Type B TX1550/RX1310"] }],
-    proTips: ["Order in PAIRS", "Verify wavelength pairing", "Type A + Type B required"],
-    compatibleWith: ["Aruba", "Cisco", "TP-Link", "Ubiquiti"],
-    inBox: ["1 × BiDi SFP", "1 × Static bag", "1 × Warranty card"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-  {
-    id: "fiber-mm-lc-lc-3m",
-    slug: "bhl-mm-patch-cord-lc-lc-3m",
-    name: "BHL MM Patch Cord LC-LC 3m",
-    category: "fiber-products",
-    subcategory: "patch-cord",
-    price: 199,
-    description: "OM3 multimode fiber patch cord. 3m, 50/125µm, UPC polish. Supports 10Gbps up to 300m.",
-    shortSpecs: ["OM3 MM", "LC-LC", "3m", "UPC"],
-    features: ["10G Ready", "50/125µm", "Low Loss", "Aqua Jacket", "Factory Tested"],
-    specifications: { "Fiber Type": "Multimode OM3", "Core/Cladding": "50/125µm", "Connector": "LC-LC", "Length": "3m", "Polish": "UPC", "Certification": "CE, RoHS" },
-    useCases: ["Data center 10G", "Office fiber", "Server racks", "Short switch links", "CCTV building"],
-    types: [{ title: "By Grade", items: ["OM1", "OM2", "OM3", "OM4", "OM5"] }],
-    proTips: ["OM3 sweet spot for 10G", "OM4 for 40G/100G", "MM cheaper but limited distance"],
-    compatibleWith: ["10G SR SFP+", "1G SX SFP", "MM converters"],
-    inBox: ["1 × Patch Cord", "2 × Dust caps"],
-    warranty: "1-Year replacement warranty",
-    images: 5,
-  },
-];
+// Alias for backward compatibility with your pages
+export const products = allProducts;
 
+// Helper functions
 export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((p) => p.slug === slug);
+  return allProducts.find(p => p.slug === slug);
 }
 
-export function getProductsByCategory(categoryId: string): Product[] {
-  return products.filter((p) => p.category === categoryId);
+export function getProductsByCategory(category: string): Product[] {
+  return allProducts.filter(p => p.category === category);
 }
 
-export function getFeaturedProducts(): Product[] {
-  return products.filter((p) => p.badge === "Best Seller" || p.badge === "Popular").slice(0, 6);
+export function getProductsBySubcategory(subcategory: string): Product[] {
+  return allProducts.filter(p => p.subcategory === subcategory);
 }
 
-export function getRelatedProducts(productId: string): Product[] {
-  const product = products.find((p) => p.id === productId);
-  if (!product) return [];
-  return products.filter((p) => p.category === product.category && p.id !== productId).slice(0, 4);
+export function getProductsByBadge(badge: string): Product[] {
+  return allProducts.filter(p => p.badge === badge);
 }
 
 export function searchProducts(query: string): Product[] {
-  const lowerQuery = query.toLowerCase();
-  return products.filter((p) => p.name.toLowerCase().includes(lowerQuery) || p.description.toLowerCase().includes(lowerQuery));
+  const q = query.toLowerCase();
+  return allProducts.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.description.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q) ||
+    p.subcategory.toLowerCase().includes(q) ||
+    p.features.some(f => f.toLowerCase().includes(q))
+  );
 }
+
+export function getRelatedProducts(product: Product | number, limit: number = 4): Product[] {
+  const targetId = typeof product === 'number' ? product : product.id;
+  const targetCategory = typeof product === 'number' 
+    ? allProducts.find(p => p.id === targetId)?.category 
+    : product.category;
+
+  if (!targetCategory) return [];
+
+  return allProducts
+    .filter(p => p.category === targetCategory && p.id !== targetId)
+    .slice(0, limit);
+}
+
+export function getFeaturedProducts(limit: number = 8): Product[] {
+  const badges = ['Bestseller', 'Latest Gen', 'Industrial Grade', 'Bundle Deal'];
+  return allProducts
+    .filter(p => p.badge && badges.includes(p.badge))
+    .slice(0, limit);
+}
+
+export function getNewArrivals(limit: number = 6): Product[] {
+  return [...allProducts]
+    .sort((a, b) => b.id - a.id)
+    .slice(0, limit);
+}
+
+export function getProductsByPriceRange(min: number, max: number): Product[] {
+  return allProducts.filter(p => p.price >= min && p.price <= max);
+}
+
+export function getSubcategories(category: string): string[] {
+  const subs = new Set<string>();
+  allProducts
+    .filter(p => p.category === category)
+    .forEach(p => subs.add(p.subcategory));
+  return Array.from(subs);
+}
+
+export function getCategoryStats() {
+  return categories.map(cat => ({
+    ...cat,
+    subcategories: getSubcategories(cat.id),
+    priceRange: {
+      min: Math.min(...allProducts.filter(p => p.category === cat.id).map(p => p.price)),
+      max: Math.max(...allProducts.filter(p => p.category === cat.id).map(p => p.price)),
+    },
+  }));
+}
+
+export default allProducts;
