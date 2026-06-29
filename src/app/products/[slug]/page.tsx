@@ -1,6 +1,11 @@
-import { products, getProductBySlug } from "@/src/lib/product";
+import { products } from "@/src/lib/product";
+import type { Product } from "@/src/lib/product";
 import ProductDetailClient from "./ProductDetailClient";
 import { notFound } from "next/navigation";
+
+// Force static generation for all product pages
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -8,13 +13,14 @@ export async function generateStaticParams() {
   }));
 }
 
-// Build a slug→product map at module level for fast lookup
-const productMap = new Map(products.map(p => [p.slug, p]));
+// Build lookup map
+const productMap = new Map<string, Product>();
+for (const p of products) {
+  productMap.set(p.slug, p);
+}
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  // Decode URL-encoded slug (handles spaces, special chars)
-  const decodedSlug = decodeURIComponent(params.slug);
-  const product = productMap.get(decodedSlug) || productMap.get(params.slug);
+  const product = productMap.get(params.slug);
 
   if (!product) {
     notFound();

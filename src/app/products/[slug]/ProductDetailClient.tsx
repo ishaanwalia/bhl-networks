@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, ChevronRight, Check, ArrowRight, Package, Shield, Truck, Zap } from "lucide-react";
 import Link from "next/link";
 import { getRelatedProducts, Product } from "@/src/lib/product";
-import { formatPrice, generateWhatsAppLink, generateBulkOrderLink } from "@/lib/utils";
+import { formatPrice, generateWhatsAppLink, generateBulkOrderLink } from "@/src/lib/utils";
 import FadeIn from "@/src/components/FadeIn";
 import ProductCard from "@/src/components/ProductCard";
 import Badge from "@/src/components/Badge";
