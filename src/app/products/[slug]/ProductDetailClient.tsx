@@ -19,7 +19,6 @@ const tabs = [
 ];
 
 export default function ProductDetailClient({ product }: { product: Product }) {
-  const product = getProductBySlug(slug);
   const [activeTab, setActiveTab] = useState("description");
   const [quantity, setQuantity] = useState(1);
 
