@@ -4,10 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, ChevronRight, Check, Package, Shield, Truck, Zap } from "lucide-react";
 import Link from "next/link";
-import { Product } from "@/src/lib/product";
-import { formatPrice, generateWhatsAppLink, generateBulkOrderLink } from "@/src/lib/utils";
-import FadeIn from "@/src/components/FadeIn";
-import Badge from "@/src/components/Badge";
+import { Product } from "@/lib/product";
+import { formatPrice, generateWhatsAppLink, generateBulkOrderLink } from "@/lib/utils";
+import FadeIn from "@/components/FadeIn";
+import Badge from "@/components/Badge";
 
 const tabs = [
   { id: "description", label: "Description" },

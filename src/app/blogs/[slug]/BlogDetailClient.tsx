@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import { Clock, Tag, ArrowLeft, Share2, Bookmark } from "lucide-react";
 import Link from "next/link";
-import { blogs, getBlogBySlug } from "@/src/lib/blogs";
-import FadeIn from "@/src/components/FadeIn";
+import { blogs, getBlogBySlug } from "@/lib/blogs";
+import FadeIn from "@/components/FadeIn";
 
 export default function BlogDetailClient({ slug }: { slug: string }) {
   const blog = getBlogBySlug(slug);

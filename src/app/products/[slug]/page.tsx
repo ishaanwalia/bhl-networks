@@ -1,5 +1,5 @@
-import { products } from "@/src/lib/product";
-import type { Product } from "@/src/lib/product";
+import { products } from "@/lib/product";
+import type { Product } from "@/lib/product";
 import ProductDetailClient from "./ProductDetailClient";
 
 export const dynamic = "force-static";

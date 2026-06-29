@@ -4,9 +4,9 @@ import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SlidersHorizontal, Grid3X3, List, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import ProductCard from "@/src/components/ProductCard";
-import FadeIn from "@/src/components/FadeIn";
-import { products, categories } from "@/src/lib/product";
+import ProductCard from "@/components/ProductCard";
+import FadeIn from "@/components/FadeIn";
+import { products, categories } from "@/lib/product";
 
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState("");
