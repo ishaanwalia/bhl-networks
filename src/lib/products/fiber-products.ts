@@ -1,6 +1,6 @@
 import { Product } from "../types";
 
-export const fiber_products_products: Product[] = [
+export const fiber_products: Product[] = [
   {
     id: 32,
     slug: "bhl-sm-patch-cord-lc-lc-1m",
@@ -1316,4 +1316,4 @@ export const fiber_products_products: Product[] = [
   }
 ];
 
-export default fiber_products_products;
+export default fiber_products;

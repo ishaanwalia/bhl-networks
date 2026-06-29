@@ -683,12 +683,12 @@ export const ftth_accessories_products: Product[] = [
   {
     id: 145,
     slug: "bhl-nylon-cable-ties-4",
-    name: "BHL Nylon Cable Ties 4"",
+    name: "BHL Nylon Cable Ties 4in.",
     category: "ftth-accessories",
     subcategory: "cable-management",
     price: 149,
     badge: "Value Pick",
-    description: "The BHL Nylon Cable Ties 4" is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL Nylon Cable Ties 4in. is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["Nylon", "4 inch"],
     features: [
       "High-quality nylon/Velcro/stainless steel construction",
@@ -719,7 +719,7 @@ export const ftth_accessories_products: Product[] = [
     ],
     compatibleWith: ["Universal", "Cisco", "Aruba", "TP-Link", "Ubiquiti"],
     inBox: [
-      "1x BHL Nylon Cable Ties 4" pack",
+      "1x BHL Nylon Cable Ties 4in. pack",
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
@@ -728,12 +728,12 @@ export const ftth_accessories_products: Product[] = [
   {
     id: 146,
     slug: "bhl-nylon-cable-ties-8",
-    name: "BHL Nylon Cable Ties 8"",
+    name: "BHL Nylon Cable Ties 8in.",
     category: "ftth-accessories",
     subcategory: "cable-management",
     price: 199,
     badge: "Value Pick",
-    description: "The BHL Nylon Cable Ties 8" is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL Nylon Cable Ties 8in. is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["Nylon", "8 inch"],
     features: [
       "High-quality nylon/Velcro/stainless steel construction",
@@ -764,7 +764,7 @@ export const ftth_accessories_products: Product[] = [
     ],
     compatibleWith: ["Universal", "Cisco", "Aruba", "TP-Link", "Ubiquiti"],
     inBox: [
-      "1x BHL Nylon Cable Ties 8" pack",
+      "1x BHL Nylon Cable Ties 8in. pack",
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
@@ -773,12 +773,12 @@ export const ftth_accessories_products: Product[] = [
   {
     id: 147,
     slug: "bhl-nylon-cable-ties-12",
-    name: "BHL Nylon Cable Ties 12"",
+    name: "BHL Nylon Cable Ties 12in.",
     category: "ftth-accessories",
     subcategory: "cable-management",
     price: 299,
     badge: "Value Pick",
-    description: "The BHL Nylon Cable Ties 12" is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL Nylon Cable Ties 12in. is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["Nylon", "12 inch"],
     features: [
       "High-quality nylon/Velcro/stainless steel construction",
@@ -809,7 +809,7 @@ export const ftth_accessories_products: Product[] = [
     ],
     compatibleWith: ["Universal", "Cisco", "Aruba", "TP-Link", "Ubiquiti"],
     inBox: [
-      "1x BHL Nylon Cable Ties 12" pack",
+      "1x BHL Nylon Cable Ties 12in. pack",
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",

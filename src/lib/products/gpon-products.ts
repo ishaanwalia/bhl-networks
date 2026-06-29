@@ -1,6 +1,6 @@
 import { Product } from "../types";
 
-export const gpon_products_products: Product[] = [
+export const gpon_products: Product[] = [
   {
     id: 153,
     slug: "bhl-gpon-onu-1ge",
@@ -586,4 +586,4 @@ export const gpon_products_products: Product[] = [
   }
 ];
 
-export default gpon_products_products;
+export default gpon_products;
