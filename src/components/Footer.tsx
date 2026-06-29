@@ -73,8 +73,8 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">© 2026 BHL Networks. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-gray-500">
-            <Link href="/privacy" className="hover:text-bhl-orange transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-bhl-orange transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-bhl-orange transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-bhl-orange transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -69,14 +69,14 @@ export default function BlogDetailClient({ blog, slug }: { blog: Blog | undefine
           </div>
 
           {/* Excerpt */}
-          <p className="text-lg text-bhl-gray-500 leading-relaxed mb-8">
+          <p className="text-lg text-bhl-gray-500 leading-relaxed mb-8 font-medium">
             {blog.excerpt}
           </p>
 
-          {/* Full Article Content */}
-          <article className="prose prose-lg max-w-none prose-headings:text-bhl-gray-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3 prose-p:text-bhl-gray-600 prose-p:leading-relaxed prose-strong:text-bhl-gray-800 prose-ul:space-y-2 prose-li:text-bhl-gray-600 prose-li:marker:text-bhl-orange prose-table:border-collapse prose-th:bg-bhl-orange-light prose-th:text-bhl-gray-800 prose-th:font-semibold prose-th:p-3 prose-th:text-left prose-td:p-3 prose-td:text-bhl-gray-600 prose-td:border prose-td:border-gray-200 prose-tr:nth-child(even):bg-gray-50 prose-code:text-bhl-orange prose-code:bg-bhl-orange-light prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-xl prose-pre:overflow-x-auto prose-blockquote:border-l-4 prose-blockquote:border-bhl-orange prose-blockquote:bg-bhl-orange-light/50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-blockquote:italic prose-blockquote:text-bhl-gray-700">
+          {/* Full Article Content - Custom Styled */}
+          <div className="article-content">
             <div dangerouslySetInnerHTML={{ __html: renderMarkdown(content) }} />
-          </article>
+          </div>
 
           {/* Tags */}
           <div className="mt-10 pt-8 border-t border-gray-100">
@@ -142,9 +142,8 @@ export default function BlogDetailClient({ blog, slug }: { blog: Blog | undefine
   );
 }
 
-// Simple markdown-to-HTML renderer (no external dependency needed)
+// Simple markdown-to-HTML renderer
 function renderMarkdown(md: string): string {
-  // Split into lines for line-by-line processing
   const lines = md.split("\n");
   const result: string[] = [];
   let inList = false;
@@ -155,21 +154,12 @@ function renderMarkdown(md: string): string {
     let line = lines[i];
     const trimmed = line.trim();
 
-    // Empty line
     if (!trimmed) {
-      if (inList) {
-        result.push("</ul>");
-        inList = false;
-      }
-      if (inTable) {
-        result.push("<table>" + tableRows.join("") + "</table>");
-        tableRows = [];
-        inTable = false;
-      }
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
       continue;
     }
 
-    // Code block
     if (trimmed.startsWith("```")) {
       if (inList) { result.push("</ul>"); inList = false; }
       if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
@@ -183,7 +173,6 @@ function renderMarkdown(md: string): string {
       continue;
     }
 
-    // Headers
     if (trimmed.startsWith("### ")) {
       if (inList) { result.push("</ul>"); inList = false; }
       if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
@@ -203,7 +192,6 @@ function renderMarkdown(md: string): string {
       continue;
     }
 
-    // Blockquote
     if (trimmed.startsWith("> ")) {
       if (inList) { result.push("</ul>"); inList = false; }
       if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
@@ -211,50 +199,37 @@ function renderMarkdown(md: string): string {
       continue;
     }
 
-    // Table row
     if (trimmed.startsWith("|")) {
       if (inList) { result.push("</ul>"); inList = false; }
       if (!inTable) inTable = true;
-      // Skip separator rows (|---|---|)
       if (trimmed.replace(/\|/g, "").replace(/-/g, "").replace(/:/g, "").trim() === "") continue;
       const cells = trimmed.split("|").map(c => c.trim()).filter(c => c);
       const isHeader = !tableRows.length;
       const cellTag = isHeader ? "th" : "td";
-      const rowClass = isHeader ? "" : "";
       const cellsHtml = cells.map(c => "<" + cellTag + ">" + parseInline(c) + "</" + cellTag + ">").join("");
       tableRows.push("<tr>" + cellsHtml + "</tr>");
       continue;
     }
 
-    // List items
     if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
       if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
-      if (!inList) {
-        result.push("<ul>");
-        inList = true;
-      }
+      if (!inList) { result.push("<ul>"); inList = true; }
       result.push("<li>" + parseInline(trimmed.substring(2)) + "</li>");
       continue;
     }
 
-    // Numbered list
     if (/^\d+\.\s/.test(trimmed)) {
       if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
-      if (!inList) {
-        result.push("<ul>");
-        inList = true;
-      }
+      if (!inList) { result.push("<ul>"); inList = true; }
       result.push("<li>" + parseInline(trimmed.replace(/^\d+\.\s/, "")) + "</li>");
       continue;
     }
 
-    // Regular paragraph
     if (inList) { result.push("</ul>"); inList = false; }
     if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
     result.push("<p>" + parseInline(trimmed) + "</p>");
   }
 
-  // Close any open blocks
   if (inList) result.push("</ul>");
   if (inTable && tableRows.length) result.push("<table>" + tableRows.join("") + "</table>");
 
