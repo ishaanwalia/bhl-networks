@@ -144,52 +144,135 @@ export default function BlogDetailClient({ blog, slug }: { blog: Blog | undefine
 
 // Simple markdown-to-HTML renderer (no external dependency needed)
 function renderMarkdown(md: string): string {
-  let html = md
-    // Escape HTML
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
+  // Split into lines for line-by-line processing
+  const lines = md.split("\n");
+  const result: string[] = [];
+  let inList = false;
+  let inTable = false;
+  let tableRows: string[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    const trimmed = line.trim();
+
+    // Empty line
+    if (!trimmed) {
+      if (inList) {
+        result.push("</ul>");
+        inList = false;
+      }
+      if (inTable) {
+        result.push("<table>" + tableRows.join("") + "</table>");
+        tableRows = [];
+        inTable = false;
+      }
+      continue;
+    }
+
+    // Code block
+    if (trimmed.startsWith("```")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      const codeLines: string[] = [];
+      i++;
+      while (i < lines.length && !lines[i].trim().startsWith("```")) {
+        codeLines.push(lines[i]);
+        i++;
+      }
+      result.push("<pre><code>" + escapeHtml(codeLines.join("\n")) + "</code></pre>");
+      continue;
+    }
+
     // Headers
-    .replace(/^### (.*$)/gim, "<h3>$1</h3>")
-    .replace(/^## (.*$)/gim, "<h2>$1</h2>")
-    .replace(/^# (.*$)/gim, "<h1>$1</h1>")
-    // Bold & Italic
+    if (trimmed.startsWith("### ")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      result.push("<h3>" + parseInline(trimmed.substring(4)) + "</h3>");
+      continue;
+    }
+    if (trimmed.startsWith("## ")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      result.push("<h2>" + parseInline(trimmed.substring(3)) + "</h2>");
+      continue;
+    }
+    if (trimmed.startsWith("# ")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      result.push("<h1>" + parseInline(trimmed.substring(2)) + "</h1>");
+      continue;
+    }
+
+    // Blockquote
+    if (trimmed.startsWith("> ")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      result.push("<blockquote>" + parseInline(trimmed.substring(2)) + "</blockquote>");
+      continue;
+    }
+
+    // Table row
+    if (trimmed.startsWith("|")) {
+      if (inList) { result.push("</ul>"); inList = false; }
+      if (!inTable) inTable = true;
+      // Skip separator rows (|---|---|)
+      if (trimmed.replace(/\|/g, "").replace(/-/g, "").replace(/:/g, "").trim() === "") continue;
+      const cells = trimmed.split("|").map(c => c.trim()).filter(c => c);
+      const isHeader = !tableRows.length;
+      const cellTag = isHeader ? "th" : "td";
+      const rowClass = isHeader ? "" : "";
+      const cellsHtml = cells.map(c => "<" + cellTag + ">" + parseInline(c) + "</" + cellTag + ">").join("");
+      tableRows.push("<tr>" + cellsHtml + "</tr>");
+      continue;
+    }
+
+    // List items
+    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      if (!inList) {
+        result.push("<ul>");
+        inList = true;
+      }
+      result.push("<li>" + parseInline(trimmed.substring(2)) + "</li>");
+      continue;
+    }
+
+    // Numbered list
+    if (/^\d+\.\s/.test(trimmed)) {
+      if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+      if (!inList) {
+        result.push("<ul>");
+        inList = true;
+      }
+      result.push("<li>" + parseInline(trimmed.replace(/^\d+\.\s/, "")) + "</li>");
+      continue;
+    }
+
+    // Regular paragraph
+    if (inList) { result.push("</ul>"); inList = false; }
+    if (inTable) { result.push("<table>" + tableRows.join("") + "</table>"); tableRows = []; inTable = false; }
+    result.push("<p>" + parseInline(trimmed) + "</p>");
+  }
+
+  // Close any open blocks
+  if (inList) result.push("</ul>");
+  if (inTable && tableRows.length) result.push("<table>" + tableRows.join("") + "</table>");
+
+  return result.join("");
+}
+
+function parseInline(text: string): string {
+  return text
     .replace(/\*\*\*(.*?)\*\*\*/g, "<strong><em>$1</em></strong>")
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.*?)\*/g, "<em>$1</em>")
-    // Code blocks
-    .replace(/```([\s\S]*?)```/g, "<pre><code>$1</code></pre>")
-    // Inline code
-    .replace(/`([^`]+)`/g, "<code>$1</code>")
-    // Blockquotes
-    .replace(/^> (.*$)/gim, "<blockquote>$1</blockquote>")
-    // Unordered lists
-    .replace(/^\s*[-*] (.*$)/gim, "<li>$1</li>")
-    // Ordered lists
-    .replace(/^\s*\d+\. (.*$)/gim, "<li>$1</li>")
-    // Tables (simple)
-    .replace(/\|(.+?)\|/g, (match, content) => {
-      const cells = content.split("|").map((c: string) => c.trim()).filter(Boolean);
-      if (cells.length === 0) return "";
-      return "<td>" + cells.join("</td><td>") + "</td>";
-    })
-    // Line breaks
-    .replace(/\n/g, "<br/>");
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
+}
 
-  // Wrap consecutive li elements in ul
-  html = html.replace(/(<li>.*?<\/li>)(?=(<br\/>)?<li>|$)/gs, (match) => {
-    return "<ul>" + match.replace(/<br\/>/g, "") + "</ul>";
-  });
-
-  // Wrap consecutive td elements in tr
-  html = html.replace(/(<td>.*?<\/td>)+/gs, (match) => {
-    return "<tr>" + match + "</tr>";
-  });
-
-  // Wrap consecutive tr elements in table
-  html = html.replace(/(<tr>.*?<\/tr>)+/gs, (match) => {
-    return "<table>" + match + "</table>";
-  });
-
-  return html;
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
