@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, Mail, MapPin, Phone, Clock, Send, Check, Truck, ArrowRight } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+import ShowroomLocationCard from "@/components/ShowroomLocationCard";
 
 const contactCards = [
   {
@@ -226,6 +227,9 @@ export default function ContactPage() {
           </FadeIn>
         </div>
       </div>
+
+      {/* Showroom Location Section */}
+      <ShowroomLocationCard />
     </div>
   );
 }
