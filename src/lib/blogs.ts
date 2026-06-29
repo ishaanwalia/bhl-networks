@@ -3,7 +3,6 @@ export interface Blog {
   slug: string;
   title: string;
   excerpt: string;
-  content?: string;
   category: string;
   author: string;
   date: string;
@@ -42,8 +41,6 @@ export function getBlogCategories(): string[] {
 }
 
 export function getBlogContent(slug: string): string {
-  // For static export, we'll inline the content or use a simple map
-  // In a real app, you'd fetch this from an API or file system
   const contents: Record<string, string> = {
     "complete-guide-sfp-modules": `## What is an SFP Module?
 
@@ -92,7 +89,7 @@ Small Form-factor Pluggable (SFP) modules are compact, hot-swappable transceiver
 ## BHL Networks SFP Range
 
 We stock 1G, 10G, 25G, 40G, and 100G SFP modules with LC and SC connectors, dual-fiber and BiDi options, and industrial temperature ratings. All modules are tested for compatibility with Cisco, Aruba, TP-Link, Ubiquiti, and other major brands.`,
-    
+
     "cat6-vs-cat6a-patch-cords": `## The Basics
 
 Both Cat6 and Cat6A (Augmented Category 6) are twisted-pair copper cables used for Ethernet networking. They look similar but have key differences in performance, bandwidth, and application.
@@ -131,7 +128,7 @@ Look for:
 ## BHL Networks Patch Cord Range
 
 We offer Cat6 and Cat6A patch cords in 0.5m to 10m lengths, with PVC and LSZH jackets, in multiple colors for easy identification. All cables are Fluke-tested and support PoE++ power delivery.`,
-    
+
     "poe-switch-buying-guide": `## What is PoE?
 
 Power over Ethernet (PoE) delivers both data and electrical power over a single Ethernet cable, eliminating the need for separate power supplies for devices like IP cameras, access points, and VoIP phones.
@@ -177,7 +174,7 @@ Always include 2-4 extra ports for expansion.
 ## BHL Networks PoE Switch Range
 
 From 4-port unmanaged to 48-port managed L3 switches with 740W+ PoE budgets. All switches support 802.3af/at/bt standards with intelligent power management and surge protection.`,
-    
+
     "ftth-deployment-best-practices": `## What is FTTH?
 
 Fiber to the Home (FTTH) delivers fiber optic connectivity directly to residential and business premises, offering symmetrical gigabit speeds and future-proof bandwidth.
@@ -205,6 +202,7 @@ ONU/ONT (Customer Premises)
 - **Feeder**: 48-288 fiber for backbone
 
 ### 3. ONU Selection
+
 | Type | Ports | WiFi | Voice | Best For |
 |------|-------|------|-------|----------|
 | Bridge | 1-4 GE | No | No | Business, custom router |
@@ -230,7 +228,7 @@ ONU/ONT (Customer Premises)
 ## BHL Networks FTTH Solutions
 
 Complete GPON/EPON solutions including OLTs (4 to 16 PON ports), ONUs/ONTs (WiFi 5/6, VoIP), fiber splitters, drop cables, and patch cords. All equipment ITU-T G.984/G.988 compliant with remote management via TR-069/OMCI.`,
-    
+
     "dac-vs-aoc-cables": `## What Are DAC and AOC?
 
 Both connect switches/servers in data centers but use different technologies:
@@ -289,7 +287,7 @@ Both connect switches/servers in data centers but use different technologies:
 ## BHL Networks DAC/AOC Range
 
 Passive DAC cables from 10G to 100G in 1m, 3m, 5m, and 7m lengths. AOC cables from 10G to 100G up to 100m. All cables tested for BER compliance and MSA compatibility with Cisco, Juniper, Arista, and Dell switches.`,
-    
+
     "fiber-patch-cord-selection": `## Single-Mode vs Multimode
 
 ### Single-Mode (OS2)
@@ -341,7 +339,7 @@ Always order 10-20% longer than measured distance:
 ## BHL Networks Fiber Patch Cord Range
 
 Single-mode (OS2) and multimode (OM3/OM4/OM5) patch cords with LC, SC, FC, and ST connectors. UPC and APC polish options. PVC and LSZH jackets. Armored options available. Lengths from 0.5m to 50m, all factory-tested with test reports included.`,
-    
+
     "network-cable-management": `## Why Cable Management Matters
 
 Poor cable management leads to:
@@ -401,7 +399,7 @@ Poor cable management leads to:
 ## BHL Networks Cable Management Range
 
 Complete cable management solutions: horizontal and vertical managers, brush panels, D-rings, cable ties (nylon and Velcro), tie mounts, blank panels, rack shelves, and cage nut kits. All components fit standard 19-inch racks with black powder-coated finish.`,
-    
+
     "media-converter-applications": `## What is a Media Converter?
 
 A media converter bridges copper Ethernet (RJ45) and fiber optic connections, extending network reach beyond copper's 100m limitation while integrating legacy copper equipment into fiber networks.
@@ -464,7 +462,7 @@ A media converter bridges copper Ethernet (RJ45) and fiber optic connections, ex
 ## BHL Networks Media Converter Range
 
 Gigabit and 10G media converters with RJ45-to-LC and RJ45-to-SC options. Single-mode and multimode support. PoE+ and PoE++ models available. Industrial temperature ratings. Auto-negotiation, link fault pass-through, and DIP switch configuration.`,
-    
+
     "industrial-switch-selection": `## What Makes a Switch "Industrial"?
 
 Industrial switches are built for harsh environments where commercial switches would fail:
@@ -476,6 +474,7 @@ Industrial switches are built for harsh environments where commercial switches w
 ## Key Selection Criteria
 
 ### 1. Temperature Range
+
 | Rating | Range | Application |
 |--------|-------|-------------|
 | Commercial | 0°C to +40°C | Office, data center |
@@ -525,7 +524,7 @@ Industrial switches are built for harsh environments where commercial switches w
 ## BHL Networks Industrial Switch Range
 
 Unmanaged and managed L2 industrial switches with 5 to 16 ports. Gigabit and Fast Ethernet options. DIN rail and wall mount. Dual 12-48V DC power input. IP40 to IP65 ratings. Operating temperature -40°C to +75°C. RSTP/ERPS ring redundancy support. PoE+ models available for powering remote devices.`,
-    
+
     "gpon-vs-epon-comparison": `## What is PON?
 
 Passive Optical Network (PON) is a fiber-optic access technology that uses unpowered splitters to serve multiple customers from a single fiber. It's the dominant technology for Fiber to the Home (FTTH) deployments worldwide.
@@ -538,6 +537,7 @@ Passive Optical Network (PON) is a fiber-optic access technology that uses unpow
 - **XGS-PON (G.9807)**: 10G symmetrical upgrade
 
 ### Technical Specs
+
 | Parameter | GPON | XGS-PON |
 |-----------|------|---------|
 | Downstream | 2.488 Gbps | 9.953 Gbps |
@@ -560,6 +560,7 @@ Passive Optical Network (PON) is a fiber-optic access technology that uses unpow
 - **IEEE 802.3av**: 10G-EPON
 
 ### Technical Specs
+
 | Parameter | EPON | 10G-EPON |
 |-----------|------|----------|
 | Downstream | 1.25 Gbps | 10.3125 Gbps |
@@ -603,7 +604,6 @@ We offer both GPON and EPON solutions:
 
 All equipment tested for interoperability with major OLT vendors.`,
   };
-  
+
   return contents[slug] || "Full article content coming soon.";
 }
-
