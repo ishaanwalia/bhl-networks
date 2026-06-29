@@ -1,9 +1,9 @@
-import { Product } from '../types';
+import { Product } from "../types";
 
-export const fiber_products: Product[] = [
+export const fiber_products_products: Product[] = [
   {
     id: 32,
-    slug: "bhl-sm-patch-cord-lc-lc",
+    slug: "bhl-sm-patch-cord-lc-lc-1m",
     name: "BHL SM Patch Cord LC-LC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -37,7 +37,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -50,11 +50,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc-1m.jpg"],
   },
   {
     id: 33,
-    slug: "bhl-sm-patch-cord-lc-lc",
+    slug: "bhl-sm-patch-cord-lc-lc-3m",
     name: "BHL SM Patch Cord LC-LC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -88,7 +88,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -101,11 +101,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc-3m.jpg"],
   },
   {
     id: 34,
-    slug: "bhl-sm-patch-cord-lc-lc",
+    slug: "bhl-sm-patch-cord-lc-lc-5m",
     name: "BHL SM Patch Cord LC-LC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -139,7 +139,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -152,11 +152,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc-5m.jpg"],
   },
   {
     id: 35,
-    slug: "bhl-sm-patch-cord-lc-sc",
+    slug: "bhl-sm-patch-cord-lc-sc-3m",
     name: "BHL SM Patch Cord LC-SC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -190,7 +190,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -203,11 +203,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-sc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-sc-3m.jpg"],
   },
   {
     id: 36,
-    slug: "bhl-sm-patch-cord-sc-sc",
+    slug: "bhl-sm-patch-cord-sc-sc-3m",
     name: "BHL SM Patch Cord SC-SC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -241,7 +241,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -254,11 +254,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-sc-sc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-sc-sc-3m.jpg"],
   },
   {
     id: 37,
-    slug: "bhl-sm-patch-cord-lc-lc-apc",
+    slug: "bhl-sm-patch-cord-lc-lc-apc-3m",
     name: "BHL SM Patch Cord LC-LC APC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -293,7 +293,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -306,11 +306,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc-apc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-lc-lc-apc-3m.jpg"],
   },
   {
     id: 38,
-    slug: "bhl-sm-patch-cord-sc-apc",
+    slug: "bhl-sm-patch-cord-sc-apc-3m",
     name: "BHL SM Patch Cord SC-APC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -345,7 +345,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -358,11 +358,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-sm-patch-cord-sc-apc.jpg"],
+    images: ["/products/fiber-products/bhl-sm-patch-cord-sc-apc-3m.jpg"],
   },
   {
     id: 39,
-    slug: "bhl-mm-patch-cord-lc-lc",
+    slug: "bhl-mm-patch-cord-lc-lc-1m",
     name: "BHL MM Patch Cord LC-LC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -396,7 +396,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -409,11 +409,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-mm-patch-cord-lc-lc.jpg"],
+    images: ["/products/fiber-products/bhl-mm-patch-cord-lc-lc-1m.jpg"],
   },
   {
     id: 40,
-    slug: "bhl-mm-patch-cord-lc-lc",
+    slug: "bhl-mm-patch-cord-lc-lc-3m",
     name: "BHL MM Patch Cord LC-LC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -447,7 +447,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -460,11 +460,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-mm-patch-cord-lc-lc.jpg"],
+    images: ["/products/fiber-products/bhl-mm-patch-cord-lc-lc-3m.jpg"],
   },
   {
     id: 41,
-    slug: "bhl-mm-patch-cord-lc-lc",
+    slug: "bhl-mm-patch-cord-lc-lc-5m",
     name: "BHL MM Patch Cord LC-LC",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -498,7 +498,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -511,11 +511,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-mm-patch-cord-lc-lc.jpg"],
+    images: ["/products/fiber-products/bhl-mm-patch-cord-lc-lc-5m.jpg"],
   },
   {
     id: 42,
-    slug: "bhl-mm-patch-cord-om4",
+    slug: "bhl-mm-patch-cord-om4-3m",
     name: "BHL MM Patch Cord OM4",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -549,7 +549,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -562,11 +562,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-mm-patch-cord-om4.jpg"],
+    images: ["/products/fiber-products/bhl-mm-patch-cord-om4-3m.jpg"],
   },
   {
     id: 43,
-    slug: "bhl-mm-patch-cord-om5",
+    slug: "bhl-mm-patch-cord-om5-3m",
     name: "BHL MM Patch Cord OM5",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -600,7 +600,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -613,11 +613,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-mm-patch-cord-om5.jpg"],
+    images: ["/products/fiber-products/bhl-mm-patch-cord-om5-3m.jpg"],
   },
   {
     id: 44,
-    slug: "bhl-armored-patch-cord-sm",
+    slug: "bhl-armored-patch-cord-sm-5m",
     name: "BHL Armored Patch Cord SM",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -652,7 +652,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -665,11 +665,11 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-armored-patch-cord-sm.jpg"],
+    images: ["/products/fiber-products/bhl-armored-patch-cord-sm-5m.jpg"],
   },
   {
     id: 45,
-    slug: "bhl-armored-patch-cord-mm",
+    slug: "bhl-armored-patch-cord-mm-5m",
     name: "BHL Armored Patch Cord MM",
     category: "fiber-products",
     subcategory: "patch-cord",
@@ -704,7 +704,7 @@ export const fiber_products: Product[] = [
       "FTTH deployment",
       "CCTV surveillance"
     ],
-    types: [{ title: "Fiber Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
+    types: [{ title: "Product Types", items: ["OS1", "OS2", "OM3", "OM4", "OM5", "LC-LC", "SC-SC", "LC-SC"] }],
     proTips: [
       "For GPON/FTTH, always use APC (green) connectors.",
       "For standard Ethernet, UPC (blue) is sufficient."
@@ -717,7 +717,7 @@ export const fiber_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/fiber-products/bhl-armored-patch-cord-mm.jpg"],
+    images: ["/products/fiber-products/bhl-armored-patch-cord-mm-5m.jpg"],
   },
   {
     id: 46,
@@ -1316,4 +1316,4 @@ export const fiber_products: Product[] = [
   }
 ];
 
-export default fiber_products;
+export default fiber_products_products;

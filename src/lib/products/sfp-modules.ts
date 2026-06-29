@@ -1,4 +1,4 @@
-import { Product } from '../types';
+import { Product } from "../types";
 
 export const sfp_modules_products: Product[] = [
   {
@@ -24,12 +24,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "550m",
-      "Wavelength": "850nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "850nm"
     },
     useCases: [
       "ISP backbone",
@@ -38,7 +38,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -77,12 +77,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "10km",
-      "Wavelength": "1310nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1310nm"
     },
     useCases: [
       "ISP backbone",
@@ -91,7 +91,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -130,12 +130,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "80km",
-      "Wavelength": "1550nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1550nm"
     },
     useCases: [
       "ISP backbone",
@@ -144,7 +144,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -168,7 +168,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "1g-sfp",
     price: 1899,
     badge: "Single Fiber",
-    description: "The BHL SFP 1G BiDi 20km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi (Bidirectional) technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP 1G BiDi 20km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["1.25G", "LC", "20km", "TX1310/RX1550"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -184,12 +184,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Fiber",
       "Connector": "LC",
       "Max Distance": "20km",
-      "Wavelength": "TX1310/RX1550",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "TX1310/RX1550"
     },
     useCases: [
       "ISP backbone",
@@ -198,7 +198,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -222,7 +222,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "1g-sfp",
     price: 3499,
     badge: "Single Fiber",
-    description: "The BHL SFP 1G BiDi 40km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi (Bidirectional) technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP 1G BiDi 40km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["1.25G", "LC", "40km", "TX1310/RX1550"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -238,12 +238,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Fiber",
       "Connector": "LC",
       "Max Distance": "40km",
-      "Wavelength": "TX1310/RX1550",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "TX1310/RX1550"
     },
     useCases: [
       "ISP backbone",
@@ -252,7 +252,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -276,7 +276,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "1g-sfp",
     price: 7999,
     badge: "Single Fiber",
-    description: "The BHL SFP 1G BiDi 80km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi (Bidirectional) technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP 1G BiDi 80km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["1.25G", "LC", "80km", "TX1490/RX1550"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -292,12 +292,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Fiber",
       "Connector": "LC",
       "Max Distance": "80km",
-      "Wavelength": "TX1490/RX1550",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "TX1490/RX1550"
     },
     useCases: [
       "ISP backbone",
@@ -306,7 +306,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -345,12 +345,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "SC",
       "Max Distance": "550m",
-      "Wavelength": "850nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "850nm"
     },
     useCases: [
       "ISP backbone",
@@ -359,7 +359,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -398,12 +398,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "SC",
       "Max Distance": "10km",
-      "Wavelength": "1310nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1310nm"
     },
     useCases: [
       "ISP backbone",
@@ -412,7 +412,7 @@ export const sfp_modules_products: Product[] = [
       "CCTV fiber backbone",
       "data center inter-rack"
     ],
-    types: [{ title: "SFP Classifications", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
+    types: [{ title: "Product Types", items: ["1000BASE-SX", "LX", "ZX", "BiDi", "SM", "MM", "LC", "SC"] }],
     proTips: [
       "Always match SFP wavelength pairs.",
       "For BiDi, one end uses TX1310/RX1550, the other uses TX1550/RX1310."
@@ -451,12 +451,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "300m",
-      "Wavelength": "850nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "850nm"
     },
     useCases: [
       "Enterprise networking",
@@ -504,12 +504,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "10km",
-      "Wavelength": "1310nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1310nm"
     },
     useCases: [
       "Enterprise networking",
@@ -557,12 +557,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "40km",
-      "Wavelength": "1550nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1550nm"
     },
     useCases: [
       "Enterprise networking",
@@ -610,12 +610,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "80km",
-      "Wavelength": "1550nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1550nm"
     },
     useCases: [
       "Enterprise networking",
@@ -648,7 +648,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "10g-sfp",
     price: 4999,
     badge: "Single Fiber",
-    description: "The BHL SFP+ 10G BiDi 20km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi (Bidirectional) technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP+ 10G BiDi 20km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["10G", "LC", "20km", "TX1270/RX1330"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -664,12 +664,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Fiber",
       "Connector": "LC",
       "Max Distance": "20km",
-      "Wavelength": "TX1270/RX1330",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "TX1270/RX1330"
     },
     useCases: [
       "Enterprise networking",
@@ -702,7 +702,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "10g-sfp",
     price: 8999,
     badge: "Single Fiber",
-    description: "The BHL SFP+ 10G BiDi 40km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi (Bidirectional) technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP+ 10G BiDi 40km is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["10G", "LC", "40km", "TX1270/RX1330"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -718,12 +718,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Fiber",
       "Connector": "LC",
       "Max Distance": "40km",
-      "Wavelength": "TX1270/RX1330",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "TX1270/RX1330"
     },
     useCases: [
       "Enterprise networking",
@@ -756,7 +756,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "10g-sfp",
     price: 15999,
     badge: "WDM Technology",
-    description: "The BHL SFP+ 10G CWDM is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Wavelength Division Multiplexing enables multiple channels over a single fiber, maximizing bandwidth utilization. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP+ 10G CWDM is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["10G", "LC", "10-80km", "1270-1610nm"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -772,12 +772,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "10-80km",
-      "Wavelength": "1270-1610nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1270-1610nm"
     },
     useCases: [
       "Enterprise networking",
@@ -810,7 +810,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "10g-sfp",
     price: 24999,
     badge: "WDM Technology",
-    description: "The BHL SFP+ 10G DWDM is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Wavelength Division Multiplexing enables multiple channels over a single fiber, maximizing bandwidth utilization. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP+ 10G DWDM is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["10G", "LC", "40-80km", "C-Band"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -826,12 +826,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "40-80km",
-      "Wavelength": "C-Band",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "C-Band"
     },
     useCases: [
       "Enterprise networking",
@@ -879,12 +879,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "100m",
-      "Wavelength": "850nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "850nm"
     },
     useCases: [
       "Enterprise networking",
@@ -932,12 +932,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Dual Fiber",
       "Connector": "LC",
       "Max Distance": "10km",
-      "Wavelength": "1310nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1310nm"
     },
     useCases: [
       "Enterprise networking",
@@ -970,7 +970,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "25g-sfp",
     price: 11999,
     badge: "Single Fiber",
-    description: "The BHL SFP28 25G BiDi is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi (Bidirectional) technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL SFP28 25G BiDi is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. BiDi technology allows data transmission over a single fiber strand, reducing fiber costs by 50%. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["25G", "LC", "10km", "TX1270/RX1330"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -986,12 +986,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Fiber",
       "Connector": "LC",
       "Max Distance": "10km",
-      "Wavelength": "TX1270/RX1330",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "TX1270/RX1330"
     },
     useCases: [
       "Enterprise networking",
@@ -1039,12 +1039,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Multimode",
       "Connector": "MPO/MTP",
       "Max Distance": "100m",
-      "Wavelength": "850nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "850nm"
     },
     useCases: [
       "Enterprise networking",
@@ -1092,12 +1092,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Mode",
       "Connector": "LC",
       "Max Distance": "10km",
-      "Wavelength": "1271-1331nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1271-1331nm"
     },
     useCases: [
       "Enterprise networking",
@@ -1145,12 +1145,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Mode",
       "Connector": "MPO/MTP",
       "Max Distance": "10km",
-      "Wavelength": "1310nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1310nm"
     },
     useCases: [
       "Enterprise networking",
@@ -1198,12 +1198,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Multimode",
       "Connector": "MPO/MTP",
       "Max Distance": "100m",
-      "Wavelength": "850nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "850nm"
     },
     useCases: [
       "Enterprise networking",
@@ -1251,12 +1251,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Mode",
       "Connector": "LC",
       "Max Distance": "10km",
-      "Wavelength": "1295-1310nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1295-1310nm"
     },
     useCases: [
       "Enterprise networking",
@@ -1289,7 +1289,7 @@ export const sfp_modules_products: Product[] = [
     subcategory: "100g-qsfp",
     price: 39999,
     badge: "WDM Technology",
-    description: "The BHL QSFP28 100G CWDM4 is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Wavelength Division Multiplexing enables multiple channels over a single fiber, maximizing bandwidth utilization. Backed by BHL Networks' quality assurance and comprehensive warranty.",
+    description: "The BHL QSFP28 100G CWDM4 is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Backed by BHL Networks' quality assurance and comprehensive warranty.",
     shortSpecs: ["100G", "LC", "2km", "1271-1331nm"],
     features: [
       "Hot-pluggable SFP/SFP+/QSFP+ form factor for easy installation",
@@ -1305,12 +1305,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Single Mode",
       "Connector": "LC",
       "Max Distance": "2km",
-      "Wavelength": "1271-1331nm",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Wavelength": "1271-1331nm"
     },
     useCases: [
       "Enterprise networking",
@@ -1359,12 +1359,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Copper",
       "Connector": "RJ45",
       "Max Distance": "100m",
-      "Wavelength": "₹2,499",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Standard": "SDH/SONET"
     },
     useCases: [
       "Enterprise networking",
@@ -1413,12 +1413,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Copper",
       "Connector": "RJ45",
       "Max Distance": "30m",
-      "Wavelength": "₹5,999",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Standard": "SDH/SONET"
     },
     useCases: [
       "Enterprise networking",
@@ -1467,12 +1467,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "Copper",
       "Connector": "RJ45",
       "Max Distance": "80m",
-      "Wavelength": "₹8,999",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Standard": "SDH/SONET"
     },
     useCases: [
       "Enterprise networking",
@@ -1520,12 +1520,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "SDH/SONET",
       "Connector": "LC",
       "Max Distance": "15km",
-      "Wavelength": "₹3,999",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Standard": "SDH/SONET"
     },
     useCases: [
       "Enterprise networking",
@@ -1573,12 +1573,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "SDH/SONET",
       "Connector": "LC",
       "Max Distance": "15km",
-      "Wavelength": "₹5,999",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Standard": "SDH/SONET"
     },
     useCases: [
       "Enterprise networking",
@@ -1626,12 +1626,12 @@ export const sfp_modules_products: Product[] = [
       "Fiber Type": "SDH/SONET",
       "Connector": "LC",
       "Max Distance": "15km",
-      "Wavelength": "₹8,999",
       "Operating Temperature": "0°C to +70°C (Commercial) / -40°C to +85°C (Industrial)",
       "Supply Voltage": "3.3V",
       "Power Consumption": "<1.5W",
       "DDM/DOM": "Supported",
-      "Compliance": "SFF-8472, IEEE 802.3"
+      "Compliance": "SFF-8472, IEEE 802.3",
+      "Standard": "SDH/SONET"
     },
     useCases: [
       "Enterprise networking",

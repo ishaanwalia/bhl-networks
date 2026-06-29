@@ -1,4 +1,4 @@
-import { Product } from '../types';
+import { Product } from "../types";
 
 export const network_kits_products: Product[] = [
   {
@@ -6,7 +6,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-basic-network-kit",
     name: "BHL Basic Network Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 1499,
     badge: "Bundle Deal",
     description: "The BHL Basic Network Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. A curated bundle of essential networking components, offering convenience and cost savings for installation projects. Backed by BHL Networks' quality assurance and comprehensive warranty.",
@@ -53,7 +53,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-office-network-kit",
     name: "BHL Office Network Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 2999,
     badge: "Bundle Deal",
     description: "The BHL Office Network Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. A curated bundle of essential networking components, offering convenience and cost savings for installation projects. Backed by BHL Networks' quality assurance and comprehensive warranty.",
@@ -100,7 +100,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-ftth-starter-kit",
     name: "BHL FTTH Starter Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 2499,
     badge: "Bundle Deal",
     description: "The BHL FTTH Starter Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. A curated bundle of essential networking components, offering convenience and cost savings for installation projects. Backed by BHL Networks' quality assurance and comprehensive warranty.",
@@ -147,7 +147,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-cctv-power-kit",
     name: "BHL CCTV Power Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 6999,
     badge: "Bundle Deal",
     description: "The BHL CCTV Power Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. A curated bundle of essential networking components, offering convenience and cost savings for installation projects. Backed by BHL Networks' quality assurance and comprehensive warranty.",
@@ -194,7 +194,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-data-center-kit",
     name: "BHL Data Center Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 9999,
     badge: "Bundle Deal",
     description: "The BHL Data Center Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. A curated bundle of essential networking components, offering convenience and cost savings for installation projects. Backed by BHL Networks' quality assurance and comprehensive warranty.",
@@ -241,7 +241,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-sfp-combo-kit",
     name: "BHL SFP Combo Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 4999,
     badge: "Bundle Deal",
     description: "The BHL SFP Combo Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. This hot-pluggable transceiver supports seamless integration into switches, routers, and media converters. Backed by BHL Networks' quality assurance and comprehensive warranty.",
@@ -288,7 +288,7 @@ export const network_kits_products: Product[] = [
     slug: "bhl-structured-cabling-kit",
     name: "BHL Structured Cabling Kit",
     category: "network-kits",
-    subcategory: "network-kit",
+    subcategory: "general",
     price: 7999,
     badge: "Bundle Deal",
     description: "The BHL Structured Cabling Kit is a premium networking component from BHL Networks, engineered for reliable performance in demanding environments. A curated bundle of essential networking components, offering convenience and cost savings for installation projects. Backed by BHL Networks' quality assurance and comprehensive warranty.",

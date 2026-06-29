@@ -1,9 +1,9 @@
-import { Product } from '../types';
+import { Product } from "../types";
 
 export const cabling_products: Product[] = [
   {
     id: 85,
-    slug: "bhl-cat6-patch-cord-05m",
+    slug: "bhl-cat6-patch-cord-05m-blue",
     name: "BHL Cat6 Patch Cord 0.5m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -49,11 +49,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-05m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-05m-blue.jpg"],
   },
   {
     id: 86,
-    slug: "bhl-cat6-patch-cord-1m",
+    slug: "bhl-cat6-patch-cord-1m-blue",
     name: "BHL Cat6 Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -99,11 +99,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-1m-blue.jpg"],
   },
   {
     id: 87,
-    slug: "bhl-cat6-patch-cord-2m",
+    slug: "bhl-cat6-patch-cord-2m-blue",
     name: "BHL Cat6 Patch Cord 2m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -149,11 +149,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-2m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-2m-blue.jpg"],
   },
   {
     id: 88,
-    slug: "bhl-cat6-patch-cord-3m",
+    slug: "bhl-cat6-patch-cord-3m-blue",
     name: "BHL Cat6 Patch Cord 3m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -199,11 +199,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-3m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-3m-blue.jpg"],
   },
   {
     id: 89,
-    slug: "bhl-cat6-patch-cord-5m",
+    slug: "bhl-cat6-patch-cord-5m-blue",
     name: "BHL Cat6 Patch Cord 5m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -249,11 +249,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-5m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-5m-blue.jpg"],
   },
   {
     id: 90,
-    slug: "bhl-cat6-patch-cord-10m",
+    slug: "bhl-cat6-patch-cord-10m-blue",
     name: "BHL Cat6 Patch Cord 10m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -299,11 +299,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-10m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-10m-blue.jpg"],
   },
   {
     id: 91,
-    slug: "bhl-cat6-patch-cord-1m",
+    slug: "bhl-cat6-patch-cord-1m-grey",
     name: "BHL Cat6 Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -349,11 +349,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-1m-grey.jpg"],
   },
   {
     id: 92,
-    slug: "bhl-cat6-patch-cord-1m",
+    slug: "bhl-cat6-patch-cord-1m-black",
     name: "BHL Cat6 Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -399,11 +399,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-1m-black.jpg"],
   },
   {
     id: 93,
-    slug: "bhl-cat6-patch-cord-1m",
+    slug: "bhl-cat6-patch-cord-1m-red",
     name: "BHL Cat6 Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -449,11 +449,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-1m-red.jpg"],
   },
   {
     id: 94,
-    slug: "bhl-cat6-patch-cord-1m",
+    slug: "bhl-cat6-patch-cord-1m-green",
     name: "BHL Cat6 Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -499,11 +499,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-1m-green.jpg"],
   },
   {
     id: 95,
-    slug: "bhl-cat6-patch-cord-1m",
+    slug: "bhl-cat6-patch-cord-1m-yellow",
     name: "BHL Cat6 Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -549,11 +549,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6-patch-cord-1m-yellow.jpg"],
   },
   {
     id: 96,
-    slug: "bhl-cat6a-patch-cord-1m",
+    slug: "bhl-cat6a-patch-cord-1m-1m",
     name: "BHL Cat6A Patch Cord 1m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -599,11 +599,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6a-patch-cord-1m.jpg"],
+    images: ["/products/cabling/bhl-cat6a-patch-cord-1m-1m.jpg"],
   },
   {
     id: 97,
-    slug: "bhl-cat6a-patch-cord-2m",
+    slug: "bhl-cat6a-patch-cord-2m-2m",
     name: "BHL Cat6A Patch Cord 2m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -649,11 +649,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6a-patch-cord-2m.jpg"],
+    images: ["/products/cabling/bhl-cat6a-patch-cord-2m-2m.jpg"],
   },
   {
     id: 98,
-    slug: "bhl-cat6a-patch-cord-3m",
+    slug: "bhl-cat6a-patch-cord-3m-3m",
     name: "BHL Cat6A Patch Cord 3m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -699,11 +699,11 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6a-patch-cord-3m.jpg"],
+    images: ["/products/cabling/bhl-cat6a-patch-cord-3m-3m.jpg"],
   },
   {
     id: 99,
-    slug: "bhl-cat6a-patch-cord-5m",
+    slug: "bhl-cat6a-patch-cord-5m-5m",
     name: "BHL Cat6A Patch Cord 5m",
     category: "cabling",
     subcategory: "patch-cord",
@@ -749,7 +749,7 @@ export const cabling_products: Product[] = [
       "Warranty card"
     ],
     warranty: "1 Year BHL Networks Warranty",
-    images: ["/products/cabling/bhl-cat6a-patch-cord-5m.jpg"],
+    images: ["/products/cabling/bhl-cat6a-patch-cord-5m-5m.jpg"],
   },
   {
     id: 100,
