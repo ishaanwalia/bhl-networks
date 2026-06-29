@@ -1,19 +1,19 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Cpu, Cable, Network, Plug, Radio, Router, Zap, Shield, Truck, Headphones } from "lucide-react";
 import Link from "next/link";
+import Hero3DNetwork from "@/components/Hero3DNetwork";
 import FadeIn from "@/components/FadeIn";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import ProductCard from "@/components/ProductCard";
 import Button from "@/components/Button";
-import HorizontalScrollGallery from "@/components/HorizontalScrollGallery";
-import InteractiveProcess from "@/components/InteractiveProcess";
-import LayeredArchitectureDiagram from "@/components/LayeredArchitectureDiagram";
 import { products, categories, getFeaturedProducts } from "@/lib/product";
 import { generateBulkOrderLink } from "@/lib/utils";
+import { ParticleBackground } from "../components/ParticleBackground";
 
 const stats = [
   { value: 400, suffix: "+", label: "Products" },
@@ -30,53 +30,13 @@ const features = [
 ];
 
 const processSteps = [
-  { 
-    number: "001", 
-    title: "Browse", 
-    description: "Explore our comprehensive catalog of 400+ networking products.",
-    details: [
-      "Filter by category, price, and specifications",
-      "Compare products side-by-side",
-      "View detailed technical specifications",
-      "Check real-time availability"
-    ]
-  },
-  { 
-    number: "002", 
-    title: "WhatsApp", 
-    description: "Chat with our team for personalized pricing and availability.",
-    details: [
-      "Get instant dealer pricing",
-      "Request product samples",
-      "Discuss bulk order discounts",
-      "Technical consultation included"
-    ]
-  },
-  { 
-    number: "003", 
-    title: "Quote", 
-    description: "Receive a detailed quotation with best dealer prices.",
-    details: [
-      "Itemized pricing breakdown",
-      "GST-inclusive transparent pricing",
-      "Volume discount calculations",
-      "Delivery timeline estimates"
-    ]
-  },
-  { 
-    number: "004", 
-    title: "Delivery", 
-    description: "Same-day dispatch with insured shipping across India.",
-    details: [
-      "Orders before 3 PM dispatched same day",
-      "Insured shipping with tracking",
-      "All India delivery network",
-      "Installation support available"
-    ]
-  },
+  { num: "001", title: "Browse", desc: "Explore 400+ networking products" },
+  { num: "002", title: "WhatsApp", desc: "Chat with us for pricing & availability" },
+  { num: "003", title: "Quote", desc: "Get best dealer price instantly" },
+  { num: "004", title: "Delivery", desc: "Same-day dispatch to your city" },
 ];
 
-const categoryIcons = {
+const categoryIcons: Record<string, React.ComponentType<any>> = {
   "sfp-modules": Cpu,
   "fiber-products": Cable,
   "switches": Network,
@@ -202,12 +162,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Horizontal Scroll Featured Products */}
-      <HorizontalScrollGallery
-        products={featuredProducts}
-        title="Featured Products"
-        subtitle="Scroll to explore our handpicked selection"
-      />
+      {/* Featured Products */}
+      <section className="py-24 bg-bhl-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-bold text-bhl-gray-900">Featured Products</h2>
+                <p className="mt-2 text-bhl-gray-500">Our best-selling networking products</p>
+              </div>
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-2 text-bhl-orange font-semibold hover:underline"
+              >
+                View All Products <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProducts.map((product, i) => (
+              <ProductCard key={product.id} product={product} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why BHL - Dark Section */}
       <section className="py-24 bg-bhl-black">
@@ -236,15 +214,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Layered Architecture Diagram */}
-      <LayeredArchitectureDiagram />
-
-      {/* Interactive Process Steps */}
-      <InteractiveProcess
-        steps={processSteps}
-        title="How It Works"
-        subtitle="Simple 4-step process to get your networking products"
-      />
+      {/* How It Works - Zera Style */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-bhl-gray-900">How It Works</h2>
+              <p className="mt-4 text-bhl-gray-500">Simple 4-step process to get your networking products</p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, i) => (
+              <FadeIn key={step.num} delay={i * 0.15}>
+                <div className="relative p-8 rounded-2xl border border-gray-100 bg-bhl-gray-50 hover:border-bhl-orange/30 transition-colors">
+                  <span className="text-5xl font-bold text-bhl-orange/20">{step.num}</span>
+                  <h3 className="mt-4 text-xl font-semibold text-bhl-gray-900">{step.title}</h3>
+                  <p className="mt-2 text-bhl-gray-500">{step.desc}</p>
+                  {i < 3 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-bhl-orange/30" />
+                  )}
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Banner */}
       <section className="py-20 bg-gradient-to-r from-bhl-orange to-bhl-orange-dark">
