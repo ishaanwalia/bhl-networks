@@ -1,5 +1,6 @@
-import { products } from "@/src/lib/product";
+import { products, getProductBySlug } from "@/src/lib/product";
 import ProductDetailClient from "./ProductDetailClient";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -8,5 +9,11 @@ export async function generateStaticParams() {
 }
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  return <ProductDetailClient slug={params.slug} />;
+  const product = getProductBySlug(params.slug);
+
+  if (!product) {
+    notFound();
+  }
+
+  return <ProductDetailClient product={product} />;
 }
