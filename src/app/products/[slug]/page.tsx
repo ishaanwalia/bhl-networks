@@ -1,4 +1,4 @@
-import { products } from "@/lib/product";
+import { products, getProductBySlug } from "@/lib/product";
 import type { Product } from "@/lib/product";
 import ProductDetailClient from "./ProductDetailClient";
 
@@ -11,14 +11,8 @@ export async function generateStaticParams() {
   }));
 }
 
-// Build lookup at module level
-const productMap: Record<string, Product> = {};
-for (const p of products) {
-  productMap[p.slug] = p;
-}
-
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = productMap[params.slug];
+  const product = getProductBySlug(params.slug);
   
   if (!product) {
     return (
