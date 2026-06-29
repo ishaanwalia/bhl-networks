@@ -1,4 +1,4 @@
-import { products } from "@/src/lib/product";
+import { products } from "@/lib/product";
 import ProductDetailClient from "./ProductDetailClient";
 import { notFound } from "next/navigation";
 
@@ -8,9 +8,11 @@ export async function generateStaticParams() {
   }));
 }
 
+// Build a slug→product map at module level for fast lookup
 const productMap = new Map(products.map(p => [p.slug, p]));
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
+  // Decode URL-encoded slug (handles spaces, special chars)
   const decodedSlug = decodeURIComponent(params.slug);
   const product = productMap.get(decodedSlug) || productMap.get(params.slug);
 
